@@ -1,0 +1,24 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="khaupshev_eldar" id="create table users">
+        <sql>
+            CREATE TABLE IF NOT EXISTS users
+            (
+                id  SERIAL PRIMARY KEY,
+                first_name VARCHAR(255),
+                sur_name VARCHAR(255),
+                birth_date date,
+                login VARCHAR(255) UNIQUE NOT NULL ,
+                password VARCHAR(255) NOT NULL ,
+                about_me VARCHAR(255),
+                address VARCHAR(255),
+                created_at TIMESTAMP,
+                updated_at TIMESTAMP
+                );
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

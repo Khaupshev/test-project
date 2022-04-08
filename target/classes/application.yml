@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test-project
+    username: postgres
+    password: postgres
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+    enabled: true
+  jpa:
+    database: postgresql
+    show-sql: true
+springfox:
+  documentation:
+    swagger.v2.path: /api-docs
