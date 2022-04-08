@@ -1,1 +1,1 @@
-CRUD service for operation with users
+CRUD service for operations with users
